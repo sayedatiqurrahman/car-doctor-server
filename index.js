@@ -60,7 +60,7 @@ async function run() {
             const token = jwt.sign(user, process.env.TO_SECRET, { expiresIn: '1h' })
             res.send({ token });
         })
-
+       
         // Services Routes
         app.get('/services', async (req, res) => {
             const cursor = serviceCollection.find();
